@@ -3,65 +3,63 @@ using Xunit;
 
 namespace UnitTestingExercise.Tests
 {
-    public class UnitTests
-    {
-        [Theory]
-        [InlineData(2, 3, 5, 10)] //Add test data <-------
-        public void AddTest(int num1, int num2, int num3, int expected)
-        {
-            //Start Step 3 here:
+   public class UnitTests
+   {
+       [Theory]
+       [InlineData(10, 2, 6, 18)]
+       public void Addition(int num1, int num2, int num3, int expected)
+       {
+           //Arrange//
+           var calculator = new Calculator();
+           //Act//
+           int sum = calculator.Add(num1, num2, num3);
+           
+           Assert.Equal(expected, sum);
+       }
 
-            //Arrange
-            // create a Calculator object
+      
+
+       [Theory]
+       [InlineData(10,2,8)]
+       public void Subtract(int minuend, int subtrahend, int expected)
+        {
+            //Arrange// , 
+            var calculator = new Calculator();
             
-
-            //Act
-                // call the Add method that is located in the Calculator class
-                // and store its result in a variable named actual
-
-            //Assert
-                //Assert.Equal(expected, actual);
+            //Act// 
+            var result = calculator.Subtract(minuend,subtrahend); 
+            
+            Assert.Equal(expected, result);
         }
 
-        [Theory]
-        [InlineData()]//Add test data <-------
-        public void SubtractTest(int minuend, int subtrhend, int expected)
-        {
-            //Start Step 5 here:
+        
+        
 
-            //Arrange
 
-            //Act
+        // Keep track of which number is getting passed as minuend and subtrahend
 
-            //Assert
 
-        }
+        // Step 5: Navigate to the UnitTests.cs file and complete the SubtractTest unit test method
 
-        [Theory]
-        [InlineData()]//Add test data <-------
-        public void MultiplyTest(int num1, int num2, int expected)
-        {
-            //Start Step 7 here:
 
-            //Arrange
+        // Step 6: 
+        // Create a Multiply method that passes 2 integers
 
-            //Act
+        
 
-            //Assert
 
-        }
+        // Step 7: Navigate to the UnitTests.cs file and complete the MultiplyTest unit test method 
 
-        [Theory]
-        [InlineData()]//Add test data <-------
-        public void DivideTest(int num1, int num2, int expected)
-        {
-            //Arrange
 
-            //Act
+        // Step 8: 
+        // Create a Divide method that passes 2 integers
+        
 
-            //Assert
+        // Step 9: Navigate to the UnitTests.cs file and complete the DivideTest unit test method 
 
-        }
 
+        //*****NOW RUN ALL OF YOUR TESTS*********//
     }
+
+   
 }
