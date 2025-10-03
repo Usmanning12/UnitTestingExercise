@@ -26,6 +26,9 @@ namespace UnitTestingExercise.Tests
 
        [Theory]
        [InlineData(10,2,8)]
+       [InlineData(40,20,20)]
+       [InlineData(15,5,10)]
+       [InlineData(30,21,9)]
        
        public void Subtract(int minuend, int subtrahend, int expected)
         {
@@ -50,6 +53,18 @@ namespace UnitTestingExercise.Tests
 
         // Step 6: 
         // Create a Multiply method that passes 2 integers
+        
+        [Theory]
+        [InlineData(10,2,20)]
+        [InlineData(20,20,400)]
+        [InlineData(12,12,144)]
+        [InlineData(6,6,36)]
+        public void Multiply(int num1, int num2,int expected)
+        {
+            var calculator = new Calculator();
+            var result = calculator.Multiply(num1, num2);
+            Assert.Equal(expected,result);
+        }
 
         
 
@@ -59,6 +74,17 @@ namespace UnitTestingExercise.Tests
 
         // Step 8: 
         // Create a Divide method that passes 2 integers
+        [Theory]
+        [InlineData(10,2,5)]
+        [InlineData(9,3,3)]
+        [InlineData(20,5,4)]
+        [InlineData(36,6,6)]
+        public void Divide(int num1, int num2, int expected)
+        {
+            var calculator = new Calculator();
+            var result = calculator.Divide(num1, num2);
+            Assert.Equal(expected,result);
+        }
         
 
         // Step 9: Navigate to the UnitTests.cs file and complete the DivideTest unit test method 
