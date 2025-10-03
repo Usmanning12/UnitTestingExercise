@@ -3,11 +3,16 @@ using Xunit;
 
 namespace UnitTestingExercise.Tests
 {
-   public class UnitTests
-   {
-       [Theory]
-       [InlineData(10, 2, 6, 18)]
-       public void Addition(int num1, int num2, int num3, int expected)
+    public class UnitTests
+    {
+        [Theory]
+        [InlineData(10, 2, 6, 18)]
+        [InlineData(5, 5, 5, 15)]
+        [InlineData(4, 8, 12, 24)]
+        [InlineData(24, 24, 24, 72)]
+    
+
+    public void Addition(int num1, int num2, int num3, int expected)
        {
            //Arrange//
            var calculator = new Calculator();
@@ -21,6 +26,7 @@ namespace UnitTestingExercise.Tests
 
        [Theory]
        [InlineData(10,2,8)]
+       
        public void Subtract(int minuend, int subtrahend, int expected)
         {
             //Arrange// , 
